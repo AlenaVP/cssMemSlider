@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+.slider {
+  position: relative;
+  width: 600px;
+  margin: 80px auto;
+  padding: 80px;
+  background: #a3a3a3;
+}
+
+.slides {
+  width: 440px;
+  display: none;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+input:checked + .slides {
+  display: block;
+}
+
+figcaption {
+  padding-top: 17px;
+  font-size: 2.4rem;
+}
+
+label {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-color: #0969da;
+
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  background-color: #0969da;
+}
+
+#slide1 ~ .controls label:nth-of-type(1):hover,
+#slide2 ~ .controls label:nth-of-type(2):hover,
+#slide3 ~ .controls label:nth-of-type(3):hover,
+#slide4 ~ .controls label:nth-of-type(4):hover {
+  background-color: #e3e3e3;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4) {
+  border: 5px solid #0969da;
+  background-color: transparent;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1):hover,
+#slide2:checked ~ .controls label:nth-of-type(2):hover,
+#slide3:checked ~ .controls label:nth-of-type(3):hover,
+#slide4:checked ~ .controls label:nth-of-type(4):hover {
+  border: 5px solid #e3e3e3;
+}
+
+.controls {
+  margin: 50px auto;
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 10vw;
+}
